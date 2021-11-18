@@ -5,15 +5,25 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import Card from '@mui/material/Card';
+// import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Divider from '@mui/material/Divider';
+
+import Rating from '@mui/material/Rating';
+import Paper from '@mui/material/Paper';
+
+import DownloadIcon from '@mui/icons-material/Download';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
+
+import ImgExtra from './image_extra.png'
+import ImgSugestao from './image_sugestao.png'
 
 const sections = [
   { title: 'Sobre', url: '#' },
@@ -62,31 +72,6 @@ const featuredPosts = [
   },
 ];
 
-
-const sidebar = {
-  title: 'About',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: TwitterIcon },
-    { name: 'Facebook', icon: FacebookIcon },
-  ],
-};
-
 const theme = createTheme();
 
 export default function Blog() {
@@ -96,13 +81,13 @@ export default function Blog() {
       <Container maxWidth="lg">
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
+          <Header title="Blog" sections={sections} />
           <Grid
             container
             spacing={3}
             sx={{ mb: 2 }}
           >
             <Grid item lg={9} sm={12}>
-              <Header title="Blog" sections={sections} />
               <Grid item xs={12} md={8} sx={{ py: 4 }}>
                 <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
                   Auxiliamos os donos de empresa a ter uma equipe autogerenciável
@@ -133,6 +118,247 @@ export default function Blog() {
             </Grid>
             <Grid container item lg={3} sm={12}>
               <Sidebar />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            spacing={3}
+            sx={{ mb: 2 }}
+          >
+            <Grid item lg={12} sm={12}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Materiais extras
+              </Typography>
+              <Grid item xs={12} sm={12} sx={{ display: 'flex' }}>
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                  <CardContent sx={{ flex: 1 }}>
+                    <CardMedia
+                      component="img"
+                      sx={{ width: '100%', display: { sm: 'block' } }}
+                      image={ImgExtra}
+                      alt="imagem extra"
+                    />
+                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                        <Typography component="h6" variant="h6">
+                          E-book
+                        </Typography>
+                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    </Grid>
+                    <Divider />
+                  </CardContent>
+                </Card>
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                  <CardContent sx={{ flex: 1 }}>
+                    <CardMedia
+                      component="img"
+                      sx={{ width: '100%', display: { sm: 'block' } }}
+                      image={ImgExtra}
+                      alt="imagem extra"
+                    />
+                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                        <Typography component="h6" variant="h6">
+                          E-book
+                        </Typography>
+                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    </Grid>
+                    <Divider />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid item lg={12} sm={12}  sx={{ my: 2 }}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Depoimentos
+              </Typography>
+              <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2} >
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item lg={12} sm={12} sx={{ my: 2 }}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Sugestões para o seu perfil
+              </Typography>
+              <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2}>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </main>
