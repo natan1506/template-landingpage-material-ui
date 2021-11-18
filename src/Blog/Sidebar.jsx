@@ -1,50 +1,45 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 
 export default function Sidebar(props) {
-  const archives = props.archives;
   const title = props.title;
   const description = props.description;
-  const social = props.social;
-  console.log(props)
+
+  const data = [
+    { invesimento: 'R$ 1.200,00' },
+    { formato: 'Híbrido' },
+    { data: '10.12.21' },
+    { cargaHoraria: '40h' },
+    { inscritos: '267' },
+    { beneficios: 'Por meio desse programa você terá acesso às ferramentas necessárias para você tirar a sua empresa do caos; Além de acesso exclusivo a conteúdos de cases construídos especialmente para mostrar como você pode comandar a sua empresa' },
+    { publicoAlvo: 'Esse curso foi desenvolvido para donos de pequenas e médias empresas' },
+  ];
 
   return (
-    <Grid item xs={12}>
-      <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
-        <Typography variant="h6" gutterBottom>
-          {title}
-        </Typography>
-        <Typography>{description}</Typography>
-      </Paper>
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Archives
+    <Grid item xs={12} sx={{ mt: 5 }}>
+      <Typography variant="h6">
+        Invesimento
       </Typography>
-      {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
-          {archive.title}
-        </Link>
-      ))}
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Social
+      <Typography variant="h6">
+        Formato
       </Typography>
-      {social.map((network) => (
-        <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center">
-            <network.icon />
-            <span>{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
+      <Typography variant="h6">
+        Data
+      </Typography>
+      <Typography variant="h6">
+        Carga Horária
+      </Typography>
+      <Typography variant="h6">
+        Número de inscritos
+      </Typography>
+      <Typography variant="h6">
+        Benefícios
+      </Typography>
+      <Typography variant="h6">
+        Público-alvo
+      </Typography>
     </Grid>
   );
 }
