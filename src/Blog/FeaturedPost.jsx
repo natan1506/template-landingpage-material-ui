@@ -17,11 +17,11 @@ export default function FeaturedPost(props) {
             <Box sx={{ mb: 2 }}>
               <WallpaperIcon />
             </Box>
-            <Typography variant="h6">
+            <Typography variant="h6" color="primary">
               {post.title}
             </Typography>
             <Box sx={{ mt: 1 }}>
-              <Typography variant="subtitle1" alignCenter component="span" paragraph>
+              <Typography variant="subtitle1" align="start">
                 {post.description}
               </Typography>
             </Box>

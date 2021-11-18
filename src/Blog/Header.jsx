@@ -10,16 +10,17 @@ export default function Header(props) {
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+        sx={{ backgroundColor:  'primary.main', mt: -4}}      
       >
         {sections.map((section) => (
           <Link
             color="inherit"
             noWrap
+            underline="none"
             key={section.title}
-            variant="body2"
+            variant="h6"
             href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
+            sx={{ mb: 2, pt: 2, pl: 5, flexShrink: 0 }}
           >
             {section.title}
           </Link>

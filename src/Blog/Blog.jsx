@@ -78,23 +78,23 @@ export default function Blog() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container>
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-          <Header title="Blog" sections={sections} />
+          <Header title="Blog" sections={sections}/>
           <Grid
             container
             spacing={3}
             sx={{ mb: 2 }}
           >
-            <Grid item lg={9} sm={12}>
+            <Grid item lg={9} sm={12} sx={{ mt: 4 }}>
               <Grid item xs={12} md={8} sx={{ py: 4 }}>
-                <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
+                <Typography variant="h5" color="primary" align="justify" sx={{ mb: 2 }}>
                   Auxiliamos os donos de empresa a ter uma equipe autogerenciável
                 </Typography>
-                <Box component="span" sx={{ mt: 1, typography: 'body1' }}>
+                <Typography align="justify" sx={{ mt: 1, typography: 'body1' }}>
                   O Programa EAG é focado em desenvolver habilidades e competências para que os donos de negócios consigam conduzir as equipes de maneira autogerenciável, mas para isso é preciso entender elementos fundamentais para o sucesso dessa jornada. Além, é claro, de boas doses de resiliência, persistência e muita dedicação.
-                </Box>
+                </Typography>
               </Grid>
               <Grid container spacing={1}>
                 {featuredPosts.map((post) => (
@@ -107,7 +107,7 @@ export default function Blog() {
                   xs={12}
                   sx={{ py: 3 }}
                 >
-                  <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
+                  <Typography variant="h5" color="primary" gutterBottom sx={{ mb: 2 }}>
                     A grande missão do EAG é transformar donos de pequenas e médias empresas para que eles construam uma empresa sem caos.
                   </Typography>
                   <Box component="span" sx={{ mt: 1, typography: 'body1' }}>
@@ -116,7 +116,7 @@ export default function Blog() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid container item lg={3} sm={12}>
+            <Grid container item lg={3} md={0} sm={0} sx={0}>
               <Sidebar />
             </Grid>
           </Grid>
@@ -126,11 +126,11 @@ export default function Blog() {
             sx={{ mb: 2 }}
           >
             <Grid item lg={12} sm={12}>
-              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+              <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
                 Materiais extras
               </Typography>
               <Grid item xs={12} sm={12} sx={{ display: 'flex' }}>
-                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0 }} >
                   <CardContent sx={{ flex: 1 }}>
                     <CardMedia
                       component="img"
@@ -138,16 +138,16 @@ export default function Blog() {
                       image={ImgExtra}
                       alt="imagem extra"
                     />
-                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
-                        <Typography component="h6" variant="h6">
-                          E-book
-                        </Typography>
-                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    <Grid container sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                      <Typography component="h6" variant="h6">
+                        E-book
+                      </Typography>
+                      <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
                     </Grid>
                     <Divider />
                   </CardContent>
                 </Card>
-                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0 }} >
                   <CardContent sx={{ flex: 1 }}>
                     <CardMedia
                       component="img"
@@ -155,19 +155,19 @@ export default function Blog() {
                       image={ImgExtra}
                       alt="imagem extra"
                     />
-                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
-                        <Typography component="h6" variant="h6">
-                          E-book
-                        </Typography>
-                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    <Grid container sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                      <Typography component="h6" variant="h6">
+                        E-book
+                      </Typography>
+                      <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
                     </Grid>
                     <Divider />
                   </CardContent>
                 </Card>
               </Grid>
             </Grid>
-            <Grid item lg={12} sm={12}  sx={{ my: 2 }}>
-              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+            <Grid item lg={12} sm={12} sx={{ my: 2 }}>
+              <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
                 Depoimentos
               </Typography>
               <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2} >
@@ -210,7 +210,7 @@ export default function Blog() {
               </Grid>
             </Grid>
             <Grid item lg={12} sm={12} sx={{ my: 2 }}>
-              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+              <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
                 Sugestões para o seu perfil
               </Typography>
               <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2}>
@@ -257,7 +257,7 @@ export default function Blog() {
                       </Grid>
                     </Grid>
                   </Paper>
-                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                  <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
                     <Rating name="read-only" value="4" readOnly />
                   </Grid>
                   <Divider />
@@ -305,7 +305,7 @@ export default function Blog() {
                       </Grid>
                     </Grid>
                   </Paper>
-                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                  <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
                     <Rating name="read-only" value="4" readOnly />
                   </Grid>
                   <Divider />
@@ -353,7 +353,7 @@ export default function Blog() {
                       </Grid>
                     </Grid>
                   </Paper>
-                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                  <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
                     <Rating name="read-only" value="4" readOnly />
                   </Grid>
                   <Divider />
