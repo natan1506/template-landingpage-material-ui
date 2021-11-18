@@ -10,7 +10,7 @@ export default function Header(props) {
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ backgroundColor:  'primary.main', mt: -4}}      
+        sx={{ backgroundColor:  'primary.main', mt: -4, color: "white"}}      
       >
         {sections.map((section) => (
           <Link
