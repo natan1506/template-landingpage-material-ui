@@ -5,15 +5,28 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import Card from '@mui/material/Card';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Divider from '@mui/material/Divider';
+
+import Rating from '@mui/material/Rating';
+import Paper from '@mui/material/Paper';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import DownloadIcon from '@mui/icons-material/Download';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
+
+import ImgExtra from './image_extra.png'
+import ImgSugestao from './image_sugestao.png'
 
 const sections = [
   { title: 'Sobre', url: '#' },
@@ -147,6 +160,247 @@ export default function Blog() {
                 archives={sidebar.archives}
                 social={sidebar.social}
               />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            spacing={3}
+            sx={{ mb: 2 }}
+          >
+            <Grid item lg={12} sm={12}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Materiais extras
+              </Typography>
+              <Grid item xs={12} sm={12} sx={{ display: 'flex' }}>
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                  <CardContent sx={{ flex: 1 }}>
+                    <CardMedia
+                      component="img"
+                      sx={{ width: '100%', display: { sm: 'block' } }}
+                      image={ImgExtra}
+                      alt="imagem extra"
+                    />
+                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                        <Typography component="h6" variant="h6">
+                          E-book
+                        </Typography>
+                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    </Grid>
+                    <Divider />
+                  </CardContent>
+                </Card>
+                <Card sx={{ display: 'flex', flexDirection: 'column', boxShadow: 0  }} >
+                  <CardContent sx={{ flex: 1 }}>
+                    <CardMedia
+                      component="img"
+                      sx={{ width: '100%', display: { sm: 'block' } }}
+                      image={ImgExtra}
+                      alt="imagem extra"
+                    />
+                    <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+                        <Typography component="h6" variant="h6">
+                          E-book
+                        </Typography>
+                        <DownloadIcon size="small" sx={{ alignSelf: 'center' }} />
+                    </Grid>
+                    <Divider />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid item lg={12} sm={12}  sx={{ my: 2 }}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Depoimentos
+              </Typography>
+              <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2} >
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Rating name="read-only" value="4" readOnly />
+                  <Box component="span" sx={{ my: 2 }}>
+                    “Aplicamos os princípios e ferramentas vistos no EAG e pudemos ter uma visão mais clara das pessoas que estão aqui, assim como ver uma transformação de organização e energia de todos”.
+                  </Box>
+                  <Typography variant="h6" sx={{ my: 2 }}>
+                    Patrícia Cândido
+                  </Typography>
+                  <Typography variant="h6">
+                    Ver case completo
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item lg={12} sm={12} sx={{ my: 2 }}>
+              <Typography component="h5" variant="h5" sx={{ mb: 2 }}>
+                Sugestões para o seu perfil
+              </Typography>
+              <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2}>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+                <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
+                  <Paper
+                    sx={{
+                      position: 'relative',
+                      backgroundColor: 'grey.800',
+                      color: '#fff',
+                      mb: 4,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundImage: `url(${ImgSugestao})`,
+                      height: '200px'
+                    }}
+                  >
+                    {/* Increase the priority of the hero background image */}
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        backgroundColor: 'rgba(0,0,0,.3)',
+                      }}
+                    />
+                    <Grid container>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            position: 'relative',
+                            p: { xs: 1, md: 2 },
+                          }}
+                        >
+                          <Box component="span" sx={{ my: 2 }}>
+                            Gestão
+                          </Box>
+                          <Typography component="h1" variant="h6" color="inherit">
+                            Programa EAG
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Paper>
+                  <Grid container  sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+                    <Rating name="read-only" value="4" readOnly />
+                  </Grid>
+                  <Divider />
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </main>

@@ -11,31 +11,29 @@ export default function FeaturedPost(props) {
 
   return (
     <Grid item xs={12} md={4} lg={3}>
-      <CardActionArea component="a" href="#">
-        <Card sx={{ display: 'flex', flexDirection: 'column' }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h5" variant="h5">
-              {post.title}
-            </Typography>
-            <Typography variant="subtitle1" component="span" paragraph>
-              {post.description}
-            </Typography>
+      <Card sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: 1 }}>
+          <Typography component="h5" variant="h5">
+            {post.title}
+          </Typography>
+          <Typography variant="subtitle1" component="span" paragraph>
+            {post.description}
+          </Typography>
 
-              {/* <Typography variant="subtitle1" color="text.secondary">
-                {post.date}
-              </Typography>
-              <Typography variant="subtitle1" color="primary">
-                Continue reading...
-              </Typography> */}
-          </CardContent>
-          {/* <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
-            alt={post.imageLabel}
-          /> */}
-        </Card>
-      </CardActionArea>
+            {/* <Typography variant="subtitle1" color="text.secondary">
+              {post.date}
+            </Typography>
+            <Typography variant="subtitle1" color="primary">
+              Continue reading...
+            </Typography> */}
+        </CardContent>
+        {/* <CardMedia
+          component="img"
+          sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+          image={post.image}
+          alt={post.imageLabel}
+        /> */}
+      </Card>
     </Grid>
   );
 }
