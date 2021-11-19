@@ -14,6 +14,8 @@ import PhotoCameraFrontIcon from '@mui/icons-material/PhotoCameraFront';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
 
 import ImgSugestao from '../LandingPage/image_sugestao.png'
 
@@ -171,8 +173,8 @@ export default function Extras() {
           </Grid>
         </Grid>
         <Divider sx={{ mt: 2 }} />
-      
-      
+
+
         <Grid container sx={{ mt: 5 }}>
           <Grid item lg={12}>
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Imersão</Typography>
@@ -191,7 +193,7 @@ export default function Extras() {
           </Grid>
         </Grid>
         <Divider sx={{ mt: 2 }} />
-      
+
         <Grid container sx={{ mt: 2 }}>
           <Grid container>
             <Grid item lg={0}>
@@ -207,19 +209,19 @@ export default function Extras() {
           </Grid>
         </Grid>
         <Divider sx={{ mt: 2 }} />
-      
+
       </Grid>
 
-      <Grid item sx={{ display: 'flex', mt: 2}} xs={12} justifyContent='center'>
+      {/* <Grid item sx={{ display: 'flex', mt: 2}} xs={12} justifyContent='center'>
         <KeyboardArrowDownIcon fontSize='large'/>
         <Typography color='secondary' variant='h6'>Ver programação completa</Typography>
-      </Grid>
+      </Grid> */}
 
       <Grid item lg={12} sm={12} sx={{ my: 2 }}>
         <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
           Sugestões para o seu perfil
         </Typography>
-        <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={2}>
+        <Grid container item xs={12} sm={12} sx={{ display: 'flex' }} spacing={4}>
           <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
             <Paper
               sx={{
@@ -234,6 +236,7 @@ export default function Extras() {
                 height: '200px'
               }}
             >
+              <BookmarkBorderIcon fontSize='large' />
               {/* Increase the priority of the hero background image */}
               <Box
                 sx={{
@@ -244,8 +247,8 @@ export default function Extras() {
                   left: 0,
                   backgroundColor: 'rgba(0,0,0,.3)',
                 }}
-              />
-              <Grid container>
+                />
+                <Grid container>
                 <Grid item xs={12}>
                   <Box
                     sx={{
@@ -263,10 +266,11 @@ export default function Extras() {
                 </Grid>
               </Grid>
             </Paper>
-            <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+            <Grid container sx={{ mt: 0, display: "flex", justifyContent: "space-between" }}>
+            <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider />
+            <Divider sx={{pb: 2}}/>
           </Grid>
           <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
             <Paper
@@ -282,6 +286,7 @@ export default function Extras() {
                 height: '200px'
               }}
             >
+              <BookmarkBorderIcon fontSize='large' />
               {/* Increase the priority of the hero background image */}
               <Box
                 sx={{
@@ -301,6 +306,7 @@ export default function Extras() {
                       p: { xs: 1, md: 2 },
                     }}
                   >
+
                     <Box component="span" sx={{ my: 2 }}>
                       Gestão
                     </Box>
@@ -311,10 +317,11 @@ export default function Extras() {
                 </Grid>
               </Grid>
             </Paper>
-            <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+            <Grid container sx={{ mt: 0, display: "flex", justifyContent: "space-between" }}>
+            <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider />
+            <Divider sx={{pb: 2}}/>
           </Grid>
           <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
             <Paper
@@ -330,6 +337,7 @@ export default function Extras() {
                 height: '200px'
               }}
             >
+              <BookmarkBorderIcon fontSize='large' />
               {/* Increase the priority of the hero background image */}
               <Box
                 sx={{
@@ -359,10 +367,11 @@ export default function Extras() {
                 </Grid>
               </Grid>
             </Paper>
-            <Grid container sx={{ mt: 2, display: "flex", justifyContent: "end" }}>
+            <Grid container sx={{ mt: 0, display: "flex", justifyContent: "space-between" }}>
+              <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider />
+            <Divider sx={{pb: 2}}/>
           </Grid>
         </Grid>
       </Grid>
