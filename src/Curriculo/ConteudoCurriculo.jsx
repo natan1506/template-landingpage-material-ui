@@ -7,27 +7,214 @@ import Divider from '@mui/material/Divider';
 import Rating from '@mui/material/Rating';
 import Paper from '@mui/material/Paper';
 
+import Button from '@mui/material/Button';
+
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PhotoCameraFrontIcon from '@mui/icons-material/PhotoCameraFront';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import ImgSugestao from '../LandingPage/image_sugestao.png'
 
 
 export default function Extras() {
   return (
-    <Grid
-      container
-      spacing={3}
-      sx={{ mb: 2 }}
-    >
+    <Grid container spacing={3} sx={{ mb: 2 }}>
       <Grid item lg={12} sm={12} sx={{ my: 2 }}>
         <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
           Saia do Caos
         </Typography>
-        <Typography>
-        O programa EAG é uma metodologia desenvolvida por meio de experiências práticas dentro de diversos cenário, ou seja, ela é versátil o suficiente para atender as demandas da sua empresa e, ainda mais, te prepara para o crescimento. Deixando sua equipe extremamente apta para desenvolver o potencial máximo das habilidades. Conheça a estrutura do curso.
+        <Typography variant='h6'>
+          O programa EAG é uma metodologia desenvolvida por meio de experiências práticas dentro de diversos cenário, ou seja, ela é versátil o suficiente para atender as demandas da sua empresa e, ainda mais, te prepara para o crescimento. Deixando sua equipe extremamente apta para desenvolver o potencial máximo das habilidades. Conheça a estrutura do curso.
         </Typography>
-        <Grid container spacing={2} item xs={12} sm={12} sx={{ display: 'flex' }}>
-          
+        <Grid container sx={{ mt: 5 }}>
+          <Grid item lg={12}>
+            <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Prepare-se para sua jornada</Typography>
+          </Grid>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
         </Grid>
+        <Divider sx={{ mt: 2 }} />
+
+        {/* COLOCAR UM MAP AQUI COM OS DADOS */}
+
+        <Grid container sx={{ mt: 2 }}>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+
+        <Grid container sx={{ mt: 2 }}>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+
+        <Grid container sx={{ mt: 2 }}>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+
+        <Grid container sx={{ mt: 2 }}>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
       </Grid>
+
+      {/* COLOCAR UM MAP AQUI COM OS DADOS */}
+
+      <Grid item lg={12} sm={12}>
+        <Grid container>
+          <Grid item lg={12}>
+            <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Inicie seu estudo aqui</Typography>
+          </Grid>
+          <Grid item lg={0}>
+            <AccessTimeIcon />
+          </Grid>
+          <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+            <Box>
+              <Typography variant='h6'>Apresentação da Imersão</Typography>
+              <Typography>Secondary text</Typography>
+            </Box>
+            <PhotoCameraFrontIcon />
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+      </Grid>
+
+      <Grid item lg={12} sm={12}>
+        <Grid container>
+          <Grid item lg={12}>
+            <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Tarefas pré-imersão</Typography>
+          </Grid>
+          <Grid item lg={0}>
+            <AccessTimeIcon />
+          </Grid>
+          <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+            <Box>
+              <Typography variant='h6'>Vamos praticar</Typography>
+              <Typography>Secondary text</Typography>
+            </Box>
+            <PhotoCameraFrontIcon />
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+      </Grid>
+
+      <Grid item lg={12} sm={12}>
+        <Grid container>
+          <Grid item lg={12}>
+            <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Estude aqui os conteúdos PVE e Meta SMART</Typography>
+          </Grid>
+          <Grid item lg={0}>
+            <AccessTimeIcon />
+          </Grid>
+          <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+            <Box>
+              <Typography variant='h6'>PVE e Meta S.M.A.R.T.</Typography>
+              <Typography>Secondary text</Typography>
+            </Box>
+            <PhotoCameraFrontIcon />
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+      
+      
+        <Grid container sx={{ mt: 5 }}>
+          <Grid item lg={12}>
+            <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Imersão</Typography>
+          </Grid>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Modelo do PVE - EAG</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+      
+        <Grid container sx={{ mt: 2 }}>
+          <Grid container>
+            <Grid item lg={0}>
+              <AccessTimeIcon />
+            </Grid>
+            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+              <Box>
+                <Typography variant='h6'>Modelo do PVE - EAG</Typography>
+                <Typography>Secondary text</Typography>
+              </Box>
+              <PhotoCameraFrontIcon />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider sx={{ mt: 2 }} />
+      
+      </Grid>
+
+      <Grid item sx={{ display: 'flex', mt: 2}} xs={12} justifyContent='center'>
+        <KeyboardArrowDownIcon fontSize='large'/>
+        <Typography color='secondary' variant='h6'>Ver programação completa</Typography>
+      </Grid>
+
       <Grid item lg={12} sm={12} sx={{ my: 2 }}>
         <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
           Sugestões para o seu perfil
@@ -179,6 +366,15 @@ export default function Extras() {
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+      <Grid container sx={{ mt: 3, display: 'flex' }}>
+        <Button>
+          <ArrowBackIosIcon />
+        </Button>
+        <Button>
+          <ArrowForwardIosIcon />
+        </Button>
+        <Typography variant='h6' color='primary'>Ver categoria completa</Typography>
+      </Grid>
+    </Grid >
   );
 }
