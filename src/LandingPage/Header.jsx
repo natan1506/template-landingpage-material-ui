@@ -8,6 +8,8 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Sobre from '../Sobre/Sobre';
 import Curriculo from '../Curriculo/Curriculo';
+import Avaliacao from '../Avaliacao/Avaliacao';
+import Professores from '../Professores/Professores';
 
 function OldHeader(props) {
   const { sections } = props;
@@ -81,9 +83,10 @@ export default function Header() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="sobre" {...a11yProps(0)} />
-          <Tab label="curriculo" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Sobre" {...a11yProps(0)} sx={{textTransform: 'none'}}/>
+          <Tab label="Curriculo" {...a11yProps(1)} sx={{textTransform: 'none'}}/>
+          <Tab label="Avaliação/ ou membros" {...a11yProps(2)} sx={{textTransform: 'none'}}/>
+          <Tab label="Professores" {...a11yProps(3)} sx={{textTransform: 'none'}}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -93,7 +96,10 @@ export default function Header() {
         <Curriculo />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Avaliacao />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Professores />
       </TabPanel>
     </Box>
   );
