@@ -1,10 +1,9 @@
-import Blog from './Blog/Blog';
+import * as React from 'react';
+import LandingPage from './LandingPage/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <Blog />
-    </div>
+    <LandingPage />
   );
 }
 
