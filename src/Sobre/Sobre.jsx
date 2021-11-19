@@ -44,7 +44,8 @@ const featuredPosts = [
   },
 ];
 
-export default function Sobre() {
+export default function Sobre(props) {
+  const { descricao } = props.conteudo;
   return (
     <>
       <Grid
@@ -54,12 +55,16 @@ export default function Sobre() {
       >
         <Grid item lg={9} sm={12} sx={{ mt: 4 }}>
           <Grid item xs={12} md={8} sx={{ py: 4 }}>
+            {descricao}
+
             <Typography variant="h5" color="primary" align="justify" sx={{ mb: 2 }}>
+            </Typography>
+            {/* <Typography variant="h5" color="primary" align="justify" sx={{ mb: 2 }}>
               Auxiliamos os donos de empresa a ter uma equipe autogerenciável
             </Typography>
             <Typography align="justify" sx={{ mt: 1, typography: 'body1' }}>
               O Programa EAG é focado em desenvolver habilidades e competências para que os donos de negócios consigam conduzir as equipes de maneira autogerenciável, mas para isso é preciso entender elementos fundamentais para o sucesso dessa jornada. Além, é claro, de boas doses de resiliência, persistência e muita dedicação.
-            </Typography>
+            </Typography> */}
           </Grid>
           <Grid container spacing={1}>
             {featuredPosts.map((post) => (
