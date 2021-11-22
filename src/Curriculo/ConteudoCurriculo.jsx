@@ -8,6 +8,7 @@ import Rating from '@mui/material/Rating';
 import Paper from '@mui/material/Paper';
 
 import Button from '@mui/material/Button';
+import Portal from '@mui/material/Portal';
 
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PhotoCameraFrontIcon from '@mui/icons-material/PhotoCameraFront';
@@ -17,10 +18,26 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
 
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+
 import ImgSugestao from '../LandingPage/image_sugestao.png'
 
 
 export default function Extras() {
+
+  const [show, setShow] = React.useState(false);
+  const container = React.useRef(null);
+
+
+  const handleClick = () => {
+    setShow(!show);
+  };
+
   return (
     <Grid container spacing={3} sx={{ mb: 2 }}>
       <Grid item lg={12} sm={12} sx={{ my: 2 }}>
@@ -35,92 +52,99 @@ export default function Extras() {
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Prepare-se para sua jornada</Typography>
           </Grid>
           <Grid container>
-            <Grid item lg={0}>
-              <AccessTimeIcon />
-            </Grid>
-            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
-              <Box>
-                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
-                <Typography>Secondary text</Typography>
-              </Box>
-              <PhotoCameraFrontIcon />
-            </Grid>
+
+            <Timeline>
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot color='success'/>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot color='success'/>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
           </Grid>
+
         </Grid>
         <Divider sx={{ mt: 2 }} />
 
-        {/* COLOCAR UM MAP AQUI COM OS DADOS */}
-
-        <Grid container sx={{ mt: 2 }}>
-          <Grid container>
-            <Grid item lg={0}>
-              <AccessTimeIcon />
-            </Grid>
-            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
-              <Box>
-                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
-                <Typography>Secondary text</Typography>
-              </Box>
-              <PhotoCameraFrontIcon />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Divider sx={{ mt: 2 }} />
-
-        <Grid container sx={{ mt: 2 }}>
-          <Grid container>
-            <Grid item lg={0}>
-              <AccessTimeIcon />
-            </Grid>
-            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
-              <Box>
-                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
-                <Typography>Secondary text</Typography>
-              </Box>
-              <PhotoCameraFrontIcon />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Divider sx={{ mt: 2 }} />
-
-        <Grid container sx={{ mt: 2 }}>
-          <Grid container>
-            <Grid item lg={0}>
-              <AccessTimeIcon />
-            </Grid>
-            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
-              <Box>
-                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
-                <Typography>Secondary text</Typography>
-              </Box>
-              <PhotoCameraFrontIcon />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Divider sx={{ mt: 2 }} />
-
-        <Grid container sx={{ mt: 2 }}>
-          <Grid container>
-            <Grid item lg={0}>
-              <AccessTimeIcon />
-            </Grid>
-            <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
-              <Box>
-                <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
-                <Typography>Secondary text</Typography>
-              </Box>
-              <PhotoCameraFrontIcon />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Divider sx={{ mt: 2 }} />
       </Grid>
 
       {/* COLOCAR UM MAP AQUI COM OS DADOS */}
 
       <Grid item lg={12} sm={12}>
         <Grid container>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Inicie seu estudo aqui</Typography>
           </Grid>
           <Grid item lg={0}>
@@ -139,7 +163,7 @@ export default function Extras() {
 
       <Grid item lg={12} sm={12}>
         <Grid container>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Tarefas pré-imersão</Typography>
           </Grid>
           <Grid item lg={0}>
@@ -158,7 +182,7 @@ export default function Extras() {
 
       <Grid item lg={12} sm={12}>
         <Grid container>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Estude aqui os conteúdos PVE e Meta SMART</Typography>
           </Grid>
           <Grid item lg={0}>
@@ -176,7 +200,7 @@ export default function Extras() {
 
 
         <Grid container sx={{ mt: 5 }}>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>Imersão</Typography>
           </Grid>
           <Grid container>
@@ -209,6 +233,84 @@ export default function Extras() {
           </Grid>
         </Grid>
         <Divider sx={{ mt: 2 }} />
+
+        <Box textAlign='center'>
+          <Button variant="outlined" onClick={handleClick} sx={{ mt: 3 }}>
+            {show ? 'Voltar' : 'Ver programação completa'}
+          </Button>
+        </Box>
+        <Box sx={{ p: 1, my: 1 }}>
+          {show ? (
+            <Portal container={container.current}>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
+                    <Box>
+                      <Typography variant='h6'>Assista aqui o ritual de Positive Focus</Typography>
+                      <Typography>Secondary text</Typography>
+                    </Box>
+                    <PhotoCameraFrontIcon />
+                  </Grid>
+                </TimelineContent>
+              </TimelineItem>
+
+            </Portal>
+          ) : null}
+        </Box>
+        <Box sx={{ p: 1, my: 1 }} ref={container} />
 
       </Grid>
 
@@ -247,8 +349,8 @@ export default function Extras() {
                   left: 0,
                   backgroundColor: 'rgba(0,0,0,.3)',
                 }}
-                />
-                <Grid container>
+              />
+              <Grid container>
                 <Grid item xs={12}>
                   <Box
                     sx={{
@@ -267,10 +369,10 @@ export default function Extras() {
               </Grid>
             </Paper>
             <Grid container sx={{ mt: 0, display: "flex", justifyContent: "space-between" }}>
-            <DomainVerificationIcon />
+              <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider sx={{pb: 2}}/>
+            <Divider sx={{ pb: 2 }} />
           </Grid>
           <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
             <Paper
@@ -318,10 +420,10 @@ export default function Extras() {
               </Grid>
             </Paper>
             <Grid container sx={{ mt: 0, display: "flex", justifyContent: "space-between" }}>
-            <DomainVerificationIcon />
+              <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider sx={{pb: 2}}/>
+            <Divider sx={{ pb: 2 }} />
           </Grid>
           <Grid item xs={12} md={6} lg={3} sx={{ display: 'flex', flexDirection: 'column' }}>
             <Paper
@@ -371,7 +473,7 @@ export default function Extras() {
               <DomainVerificationIcon />
               <Rating name="read-only" value="4" readOnly />
             </Grid>
-            <Divider sx={{pb: 2}}/>
+            <Divider sx={{ pb: 2 }} />
           </Grid>
         </Grid>
       </Grid>
