@@ -3,7 +3,10 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
+import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+
+import { Link } from 'react-router-dom';
 
 import FeaturedPost from './FeaturedPost';
 import Sidebar from '../LandingPage/Sidebar';
@@ -175,7 +178,13 @@ export default function Sobre(props) {
             </Grid>
           </Grid>
         </Grid>
+        <Grid container sx={{ mx: 2, justifyContent: 'flex-end' }}>
+          <Button variant="outlined"><Link to="/catalogo" >Ver programação completa</Link></Button>
+        </Grid>
         <Extras />
+        <Grid container sx={{ mx: 2 }}>
+          <Button variant="outlined">Ver categoria completa</Button>
+        </Grid>
       </Grid>
     </>
   );
