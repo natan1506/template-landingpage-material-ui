@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Sobre from '../Sobre/Sobre';
-import Curriculo from '../Curriculo/Curriculo';
+import Aulas from '../Aulas/Aulas';
 import Avaliacao from '../Avaliacao/Avaliacao';
 import Professores from '../Professores/Professores';
 
@@ -177,7 +177,6 @@ function LandingPage() {
     setValueTab(newValue);
   };
 
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -188,8 +187,8 @@ function LandingPage() {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={valueTab} onChange={handleChangeTab} aria-label="basic tabs example">
                 <Tab label="Sobre" {...a11yProps(0)} sx={{textTransform: 'none'}}/>
-                <Tab label="Curriculo" {...a11yProps(1)} sx={{textTransform: 'none'}}/>
-                <Tab label="Avaliação/ ou membros" {...a11yProps(2)} sx={{textTransform: 'none'}}/>
+                <Tab label="Aulas" {...a11yProps(1)} sx={{textTransform: 'none'}}/>
+                <Tab label="Avaliação" {...a11yProps(2)} sx={{textTransform: 'none'}}/>
                 <Tab label="Professores" {...a11yProps(3)} sx={{textTransform: 'none'}}/>
               </Tabs>
             </Box>
@@ -197,7 +196,7 @@ function LandingPage() {
               <Sobre conteudo={returnAPI} />
             </TabPanel>
             <TabPanel value={valueTab} index={1}>
-              <Curriculo conteudo={returnAPI} />
+              <Aulas conteudo={returnAPI} />
             </TabPanel>
             <TabPanel value={valueTab} index={2}>
               <Avaliacao conteudo={returnAPI} />

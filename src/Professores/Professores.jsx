@@ -5,7 +5,9 @@ import Rating from '@mui/material/Rating';
 
 import Extras from '../LandingPage/Extras';
 
-export default function Professores() {
+export default function Professores(props) {
+  const { metodologia } = props.conteudo
+
   return (
     <>
       <Grid
@@ -13,6 +15,7 @@ export default function Professores() {
         spacing={3}
         sx={{ mb: 2 }}
       >
+        {metodologia}
         <Grid item lg={12} sm={12} sx={{ mt: 4 }}>
           <Typography variant="h5">Nome do Professor</Typography>
           <Grid container sm={12} spacing={2} sx={{ my: 8 }}>

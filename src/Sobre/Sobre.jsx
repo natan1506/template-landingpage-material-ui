@@ -45,7 +45,9 @@ const featuredPosts = [
 ];
 
 export default function Sobre(props) {
-  const { descricao } = props.conteudo;
+
+  const { descricao, objetivo } = props.conteudo;
+
   return (
     <>
       <Grid
@@ -53,10 +55,10 @@ export default function Sobre(props) {
         spacing={3}
         sx={{ mb: 2 }}
       >
-        <Grid item lg={9} sm={12} sx={{ mt: 4 }}>
-          <Grid item xs={12} md={8} sx={{ py: 4 }}>
-            {descricao}
-
+        <Grid item lg={9} sm={12} sx={{ mt: 2 }}>
+          <Grid item xs={12} md={8}>
+           
+            <div dangerouslySetInnerHTML={{ __html:  descricao }} />
             <Typography variant="h5" color="primary" align="justify" sx={{ mb: 2 }}>
             </Typography>
             {/* <Typography variant="h5" color="primary" align="justify" sx={{ mb: 2 }}>
@@ -87,7 +89,7 @@ export default function Sobre(props) {
           </Grid>
         </Grid>
         <Grid container item lg={3} md={0} sm={0} sx={0}>
-          <Sidebar />
+          <Sidebar objetivos={objetivo}/>
         </Grid>
       </Grid>
       <Grid
