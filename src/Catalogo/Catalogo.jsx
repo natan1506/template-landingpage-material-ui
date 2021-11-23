@@ -15,6 +15,8 @@ import Professores from '../Professores/Professores';
 
 import MainFeaturedPost from '../LandingPage/MainFeaturedPost';
 
+import Extras from '../LandingPage/Extras';
+
 const sections = [
   { title: 'Sobre', url: '#' },
   { title: 'Currículo', url: '#' },
@@ -44,6 +46,7 @@ function Catalogo() {
           <Box sx={{ width: '100%' }}>
             <h1>Catalogo</h1>
           </Box>
+          <Extras />
         </main>
     </ThemeProvider>
   );
