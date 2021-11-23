@@ -1,26 +1,16 @@
 import * as React from 'react';
+import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import Link from '@mui/material/Link';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
-import Sobre from '../Sobre/Sobre';
-import Aulas from '../Aulas/Aulas';
-import Avaliacao from '../Avaliacao/Avaliacao';
-import Professores from '../Professores/Professores';
+import { Link } from 'react-router-dom';
+
+import Extras from '../LandingPage/Extras';
 
 import MainFeaturedPost from '../LandingPage/MainFeaturedPost';
-
-const sections = [
-  { title: 'Sobre', url: '#' },
-  { title: 'Currículo', url: '#' },
-  { title: 'Avaliação/ou membros', url: '#' },
-  { title: 'Professores', url: '#' },
-];
 
 const mainFeaturedPost = {
   title: 'Programa EAG',
@@ -31,21 +21,33 @@ const mainFeaturedPost = {
   linkText: 'Continue reading…',
 };
 
-const theme = createTheme();
 
 function Catalogo() {
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <MainFeaturedPost post={mainFeaturedPost} />
       <CssBaseline />
-        <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          {/* <Header title="Blog" sections={sections} conteudo={returnAPI}/> */}
-          <Box sx={{ width: '100%' }}>
-            <h1>Catalogo</h1>
-          </Box>
-        </main>
-    </ThemeProvider>
+      <Grid
+        container
+        spacing={3}
+        sx={{ mb: 2 }}
+      >
+        <Grid container item sm={12} sx={{ mx: 2, justifyContent: 'flex-end' }}>
+          <Button variant="outlined"><Link to="/catalogo" >Ver programação completa</Link></Button>
+        </Grid>
+
+        <Grid item lg={12} sm={12} sx={{ mx: 2 }}>
+          <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
+            Sugestões para o seu perfil
+          </Typography>
+          <Extras />
+        </Grid>
+        <Grid item sx={{ mx: 2 }}>
+          <Button variant="outlined">Ver categoria completa</Button>
+        </Grid>
+      </Grid>
+    </>
   );
 }
 

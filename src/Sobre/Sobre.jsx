@@ -178,11 +178,17 @@ export default function Sobre(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container sx={{ mx: 2, justifyContent: 'flex-end' }}>
+        <Grid container item sm={12} sx={{ mx: 2, justifyContent: 'flex-end' }}>
           <Button variant="outlined"><Link to="/catalogo" >Ver programação completa</Link></Button>
         </Grid>
-        <Extras />
-        <Grid container sx={{ mx: 2 }}>
+
+        <Grid item lg={12} sm={12} sx={{ mx: 2 }}>
+          <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
+            Sugestões para o seu perfil
+          </Typography>
+          <Extras />
+        </Grid>
+        <Grid item sx={{ mx: 2 }}>
           <Button variant="outlined">Ver categoria completa</Button>
         </Grid>
       </Grid>
