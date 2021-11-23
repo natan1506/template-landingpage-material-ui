@@ -12,10 +12,10 @@ export default function Sidebar(props) {
         <Typography variant="h6" color="primary">Formato</Typography>
         <Typography variant="subtitle1">Híbrido</Typography>
       </Box>
-      <Box sx={{ mb: 1.5 }}>
+      {/* <Box sx={{ mb: 1.5 }}>
         <Typography variant="h6" color="primary">Data</Typography>
         <Typography variant="subtitle1">10.12.21</Typography>
-      </Box>
+      </Box> */}
       <Box sx={{ mb: 1.5 }}>
         <Typography variant="h6" color="primary">Carga Horária</Typography>
         <Typography variant="subtitle1">40h</Typography>
