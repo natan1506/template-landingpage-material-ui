@@ -47,7 +47,7 @@ export default function Extras() {
   }
 
   return (
-    <Grid item lg={12} sm={12} sx={{ my: 2 }}>
+    <Grid item lg={12} sm={12} sx={{ my: 1 }}>
       <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
         Sugestões para o seu perfil
       </Typography>
