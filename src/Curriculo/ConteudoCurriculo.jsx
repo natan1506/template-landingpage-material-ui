@@ -33,7 +33,6 @@ export default function Extras() {
   const [show, setShow] = React.useState(false);
   const container = React.useRef(null);
 
-
   const handleClick = () => {
     setShow(!show);
   };
@@ -56,7 +55,7 @@ export default function Extras() {
             <Timeline>
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot color='success'/>
+                  <TimelineDot color='success' />
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
@@ -72,7 +71,7 @@ export default function Extras() {
 
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot color='success'/>
+                  <TimelineDot color='success' />
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
@@ -234,11 +233,6 @@ export default function Extras() {
         </Grid>
         <Divider sx={{ mt: 2 }} />
 
-        <Box textAlign='center'>
-          <Button variant="outlined" onClick={handleClick} sx={{ mt: 3 }}>
-            {show ? 'Voltar' : 'Ver programação completa'}
-          </Button>
-        </Box>
         <Box sx={{ p: 1, my: 1 }}>
           {show ? (
             <Portal container={container.current}>
@@ -294,7 +288,6 @@ export default function Extras() {
               <TimelineItem>
                 <TimelineSeparator>
                   <TimelineDot />
-                  <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
                   <Grid item lg={11} sx={{ display: 'flex', justifyContent: 'space-between', pl: 3 }}>
@@ -310,8 +303,13 @@ export default function Extras() {
             </Portal>
           ) : null}
         </Box>
-        <Box sx={{ p: 1, my: 1 }} ref={container} />
 
+        <Box sx={{ p: 1, my: 1 }} ref={container} />
+        <Box textAlign='center'>
+          <Button onClick={handleClick} sx={{ mt: 3 }}>
+            {show ?  'Voltar' : 'Ver programação completa'}
+          </Button>
+        </Box>
       </Grid>
 
       {/* <Grid item sx={{ display: 'flex', mt: 2}} xs={12} justifyContent='center'>
