@@ -4,12 +4,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 export default function Sidebar(props) {
+  const { objetivo } = props
   return (
-    <Grid item xs={12} sx={{ mt: 5, ml: 5, display: {xs: "none", lg: "block" }}}>
-      {/* <Box sx={{ mb: 1.5 }}>
-        <Typography variant="h6" color="primary">Invesimento</Typography>
-        <Typography variant="h5">R$ 1.200,00</Typography>
-      </Box> */}
+    <Grid item xs={12} sx={{ mt: 8, ml: 5, display: {xs: "none", lg: "block" }}}>
+      {objetivo}
       <Box sx={{ mb: 1.5 }}>
         <Typography variant="h6" color="primary">Formato</Typography>
         <Typography variant="subtitle1">Híbrido</Typography>
