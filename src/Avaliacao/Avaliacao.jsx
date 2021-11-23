@@ -139,10 +139,7 @@ export default function Avaliacao () {
               </Box>
             </Grid>
           </Grid>
-          
-          
         </Grid>
-        
       </Grid>    
       <Extras />
     </>
