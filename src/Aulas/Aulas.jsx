@@ -4,6 +4,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 
+import Rating from '@mui/material/Rating';
+import Paper from '@mui/material/Paper';
+
 import Button from '@mui/material/Button';
 import Portal from '@mui/material/Portal';
 
@@ -17,12 +20,13 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
 
 
+import { Link } from 'react-router-dom';
+
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
 
-import { Link } from 'react-router-dom';
 
 import ImgSugestao from '../LandingPage/image_sugestao.png'
 import Extras from '../LandingPage/Extras';
@@ -269,19 +273,20 @@ export default function Aulas() {
           </Button>
         </Box>
       </Grid>
-        <Grid container item sm={12} sx={{ mx: 2, justifyContent: 'flex-end' }}>
-          <Button variant="outlined"><Link to="/catalogo" >Ver programação completa</Link></Button>
-        </Grid>
 
-        <Grid item lg={12} sm={12} sx={{ mx: 2 }}>
-          <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
-            Sugestões para o seu perfil
-          </Typography>
-          <Extras />
-        </Grid>
-        <Grid item sx={{ mx: 2 }}>
-          <Button variant="outlined">Ver categoria completa</Button>
-        </Grid>
+      <Grid container item sm={12} sx={{ mx: 2, justifyContent: 'flex-end' }}>
+        <Button variant="outlined"><Link to="/catalogo" >Ver programação completa</Link></Button>
+      </Grid>
+
+      <Grid item lg={12} sm={12} sx={{ mx: 2 }}>
+        <Typography component="h5" variant="h5" color="primary" sx={{ mb: 2 }}>
+          Sugestões para o seu perfil
+        </Typography>
+        <Extras />
+      </Grid>
+      <Grid item sx={{ mx: 2 }}>
+        <Button variant="outlined">Ver categoria completa</Button>
+      </Grid>
     </Grid >
   );
 }
